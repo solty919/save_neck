@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>UIApplicationSceneManifest</key>
+	<dict>
+		<key>UIApplicationSupportsMultipleScenes</key>
+		<true/>
+		<key>UISceneConfigurations</key>
+		<dict/>
+	</dict>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>location</string>
+	</array>
+	<key>NSMotionUsageDescription</key>
+	<string>AirPodsのモーションセンサーを利用します。</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>位置情報を利用します</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>位置情報を利用します</string>
+</dict>
+</plist>
