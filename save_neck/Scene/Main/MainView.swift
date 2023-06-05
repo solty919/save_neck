@@ -14,10 +14,11 @@ struct MainView: View {
                     VStack {
                         airPods
                         threshold
+                        foot
                     }
                 }
             }
-            .navigationTitle("首守 Shushu")
+            .navigationTitle("首守 -Shushu-")
         }
         .sheet(isPresented: observer.$isFirstLaunch) {
             Neck(isFirstLaunch: observer.$isFirstLaunch)
@@ -30,7 +31,7 @@ struct MainView: View {
     private var airPods: some View {
         VStack(alignment: .leading) {
             HStack {
-                Text("AirPods Pro")
+                Text("Headphone")
                     .font(.headline)
                     .bold()
                 
@@ -86,6 +87,7 @@ struct MainView: View {
                         Text("今の角度を設定")
                             .bold()
                     }
+                    .disabled(!observer.isConnect)
                 }
             }
             .padding(.vertical, 32)
@@ -113,6 +115,13 @@ struct MainView: View {
                     .bold()
                     .foregroundColor(Color(.secondaryLabel))
             )
+    }
+    
+    private var foot: some View {
+        Text("ヘッドホンとの接続が切れてから10分後にアプリは自動終了します")
+            .font(.footnote)
+            .foregroundColor(Color(.secondaryLabel))
+            .padding(.horizontal)
     }
     
 }

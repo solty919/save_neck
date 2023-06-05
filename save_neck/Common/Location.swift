@@ -10,13 +10,13 @@ final class Location: NSObject, CLLocationManagerDelegate {
         super.init()
         
         locationManager.delegate = self
-        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.desiredAccuracy = kCLLocationAccuracyThreeKilometers
         locationManager.allowsBackgroundLocationUpdates = true
-        locationManager.showsBackgroundLocationIndicator = true
         locationManager.pausesLocationUpdatesAutomatically = false
     }
     
     func start() {
+        requestPermission()
         locationManager.startUpdatingLocation()
     }
     
@@ -28,4 +28,7 @@ final class Location: NSObject, CLLocationManagerDelegate {
         locationManager.requestAlwaysAuthorization()
     }
     
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        print(locations)
+    }
 }

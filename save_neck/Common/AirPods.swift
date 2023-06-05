@@ -11,6 +11,7 @@ final class AirPods: NSObject, CLLocationManagerDelegate {
     var isDeviceMotionAvailable: Bool { motionManager.isDeviceMotionAvailable }
     
     private let motionManager = CMHeadphoneMotionManager()
+    private let isMock = false
     
     private override init() {
         super.init()
@@ -28,9 +29,12 @@ final class AirPods: NSObject, CLLocationManagerDelegate {
             if let error {
                 self.onError?(error.localizedDescription)
             }
-            
+            print(motion.attitude.quaternion.x)
             self.onUpdate?(motion.attitude.quaternion.x)
         }
+        
+        //デバッグ用
+        if isMock { mock() }
     }
     
     func stop() {
@@ -41,6 +45,14 @@ final class AirPods: NSObject, CLLocationManagerDelegate {
         CMHeadphoneMotionManager.authorizationStatus()
     }
     
+    private func mock() {
+        Task {
+            try await Task.sleep(for: .seconds(1))
+            self.onConnect?(true)
+            self.onUpdate?(-0.485)
+            mock()
+        }
+    }
 }
 
 extension AirPods: CMHeadphoneMotionManagerDelegate {

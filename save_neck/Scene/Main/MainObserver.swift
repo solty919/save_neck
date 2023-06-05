@@ -1,6 +1,7 @@
 import Foundation
 import UserNotifications
 import SwiftUI
+import Combine
 
 final class MainObserver: NSObject, ObservableObject {
     
@@ -16,6 +17,7 @@ final class MainObserver: NSObject, ObservableObject {
     var isDeviceMotionAvailable = AirPods.shared.isDeviceMotionAvailable
     
     private var task: Task<Void, Error>?
+    private var crashTask: Task<Void, Error>?
     
     override init() {
         super.init()
@@ -37,7 +39,14 @@ final class MainObserver: NSObject, ObservableObject {
             self.check()
         }
         AirPods.shared.onConnect = { isConnect in
-            if !isConnect { self.quaternionX = 0.0 }
+            if !isConnect {
+                self.quaternionX = 0.0
+                self.state = .standard
+                self.task?.cancel()
+                self.exitTimer()
+            } else {
+                self.crashTask?.cancel()
+            }
             self.isConnect = isConnect
         }
         AirPods.shared.onError = { error in
@@ -66,6 +75,15 @@ final class MainObserver: NSObject, ObservableObject {
         } else {
             task?.cancel()
             state = .standard
+        }
+    }
+    
+    private func exitTimer() {
+        crashTask = Task.detached {
+            try await Task.sleep(for: .seconds(60 * 10)) //10m
+            await UIControl().sendAction(#selector(URLSessionTask.suspend), to: UIApplication.shared, for: nil)
+            try await Task.sleep(for: .seconds(0.2)) //0.2s
+            exit(0)
         }
     }
     
