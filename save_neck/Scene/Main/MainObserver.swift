@@ -9,6 +9,7 @@ final class MainObserver: NSObject, ObservableObject {
     @Published var isConnect = false
     @Published var error = ""
     @Published var state: State = .standard
+    @Published var isOpenInfo = false
     @AppStorage("outRange") var outRange = 80.0
     @AppStorage("isFirstLaunch") var isFirstLaunch = true
     
@@ -35,8 +36,10 @@ final class MainObserver: NSObject, ObservableObject {
     
     func start() {
         AirPods.shared.onUpdate = { quaternionX in
-            self.quaternionX = quaternionX * -180
-            self.check()
+            Task { @MainActor in
+                self.quaternionX = quaternionX * -180
+                self.check()
+            }
         }
         AirPods.shared.onConnect = { isConnect in
             if !isConnect {
@@ -47,7 +50,9 @@ final class MainObserver: NSObject, ObservableObject {
             } else {
                 self.crashTask?.cancel()
             }
-            self.isConnect = isConnect
+            Task { @MainActor in
+                self.isConnect = isConnect
+            }
         }
         AirPods.shared.onError = { error in
             self.error = error

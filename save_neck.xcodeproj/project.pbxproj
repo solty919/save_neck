@@ -11,6 +11,7 @@
 		400E96132A17D1F400472D13 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 400E96122A17D1F400472D13 /* MainView.swift */; };
 		400E96152A17D1F600472D13 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 400E96142A17D1F600472D13 /* Assets.xcassets */; };
 		400E96182A17D1F600472D13 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 400E96172A17D1F600472D13 /* Preview Assets.xcassets */; };
+		404316A42A3440660024FAF8 /* Info.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404316A32A3440660024FAF8 /* Info.swift */; };
 		407C5DA72A17D71500FD298C /* MainObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407C5DA62A17D71500FD298C /* MainObserver.swift */; };
 		407C5DAA2A17D9FB00FD298C /* AirPods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407C5DA92A17D9FB00FD298C /* AirPods.swift */; };
 		407C5DAC2A18D64200FD298C /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407C5DAB2A18D64200FD298C /* Notification.swift */; };
@@ -19,6 +20,7 @@
 		407C5DB62A1CE21A00FD298C /* Function.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407C5DB52A1CE21A00FD298C /* Function.swift */; };
 		407C5DB82A1CE22800FD298C /* Permission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407C5DB72A1CE22800FD298C /* Permission.swift */; };
 		407C5DBA2A21DA8800FD298C /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407C5DB92A21DA8800FD298C /* Location.swift */; };
+		40C0C16E2A34D5680074D547 /* Safari.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C0C16D2A34D5680074D547 /* Safari.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,7 @@
 		400E96142A17D1F600472D13 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		400E96172A17D1F600472D13 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		400E961E2A17D49F00472D13 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = save_neck/Resource/Info.plist; sourceTree = SOURCE_ROOT; };
+		404316A32A3440660024FAF8 /* Info.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Info.swift; sourceTree = "<group>"; };
 		407C5DA62A17D71500FD298C /* MainObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainObserver.swift; sourceTree = "<group>"; };
 		407C5DA92A17D9FB00FD298C /* AirPods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirPods.swift; sourceTree = "<group>"; };
 		407C5DAB2A18D64200FD298C /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
@@ -36,6 +39,7 @@
 		407C5DB52A1CE21A00FD298C /* Function.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Function.swift; sourceTree = "<group>"; };
 		407C5DB72A1CE22800FD298C /* Permission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Permission.swift; sourceTree = "<group>"; };
 		407C5DB92A21DA8800FD298C /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		40C0C16D2A34D5680074D547 /* Safari.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Safari.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,11 +99,21 @@
 			path = Resource;
 			sourceTree = "<group>";
 		};
+		404316A22A343FDC0024FAF8 /* Info */ = {
+			isa = PBXGroup;
+			children = (
+				404316A32A3440660024FAF8 /* Info.swift */,
+			);
+			path = Info;
+			sourceTree = "<group>";
+		};
 		407C5DA42A17D65C00FD298C /* Scene */ = {
 			isa = PBXGroup;
 			children = (
 				407C5DB22A1CE16F00FD298C /* Welcome */,
 				407C5DA52A17D6F900FD298C /* Main */,
+				404316A22A343FDC0024FAF8 /* Info */,
+				40C0C16C2A34D5510074D547 /* Safari */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
@@ -131,6 +145,14 @@
 				407C5DB72A1CE22800FD298C /* Permission.swift */,
 			);
 			path = Welcome;
+			sourceTree = "<group>";
+		};
+		40C0C16C2A34D5510074D547 /* Safari */ = {
+			isa = PBXGroup;
+			children = (
+				40C0C16D2A34D5680074D547 /* Safari.swift */,
+			);
+			path = Safari;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -208,11 +230,13 @@
 				407C5DBA2A21DA8800FD298C /* Location.swift in Sources */,
 				407C5DAC2A18D64200FD298C /* Notification.swift in Sources */,
 				407C5DA72A17D71500FD298C /* MainObserver.swift in Sources */,
+				40C0C16E2A34D5680074D547 /* Safari.swift in Sources */,
 				407C5DAA2A17D9FB00FD298C /* AirPods.swift in Sources */,
 				407C5DB82A1CE22800FD298C /* Permission.swift in Sources */,
 				400E96112A17D1F400472D13 /* SaveNeckApp.swift in Sources */,
 				407C5DB12A18EDB700FD298C /* Strings.swift in Sources */,
 				407C5DB62A1CE21A00FD298C /* Function.swift in Sources */,
+				404316A42A3440660024FAF8 /* Info.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,7 +364,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"save_neck/Resource/Preview Content\"";
 				DEVELOPMENT_TEAM = "";
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = DU45P949ZD;
@@ -370,7 +394,7 @@
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -381,7 +405,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"save_neck/Resource/Preview Content\"";
 				DEVELOPMENT_TEAM = "";
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = DU45P949ZD;
@@ -411,7 +435,7 @@
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

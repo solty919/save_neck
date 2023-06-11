@@ -19,12 +19,24 @@ struct MainView: View {
                 }
             }
             .navigationTitle("首守 -Shushu-")
+            .toolbar {
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Button {
+                        observer.isOpenInfo = true
+                    } label: {
+                        Image(systemName: "info.circle")
+                    }
+                }
+            }
         }
         .sheet(isPresented: observer.$isFirstLaunch) {
             Neck(isFirstLaunch: observer.$isFirstLaunch)
                 .onDisappear {
                     observer.start()
                 }
+        }
+        .sheet(isPresented: $observer.isOpenInfo) {
+            Info()
         }
     }
     
