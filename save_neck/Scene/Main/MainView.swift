@@ -1,4 +1,5 @@
 import SwiftUI
+import Charts
 
 struct MainView: View {
     
@@ -12,8 +13,9 @@ struct MainView: View {
                 
                 ScrollView {
                     VStack {
-                        airPods
-                        threshold
+//                        airPods
+//                        threshold
+                        location
                         foot
                     }
                 }
@@ -127,6 +129,62 @@ struct MainView: View {
                     .bold()
                     .foregroundColor(Color(.secondaryLabel))
             )
+    }
+    
+    private var location: some View {
+        VStack(alignment: .leading) {
+            Text("姿勢の履歴")
+                .font(.headline)
+                .bold()
+            
+            
+            
+            VStack(spacing: 32) {
+                HStack {
+                    VStack(alignment: .leading, spacing: 4) {
+                        Text("今日のカウント")
+                            .font(.subheadline)
+                            .foregroundColor(Color(UIColor.secondaryLabel))
+                        Text("6回")
+                            .font(.largeTitle)
+                            .bold()
+                    }
+                    
+                    Spacer()
+                    
+                    VStack {
+                        HStack {
+                            Text("前回との差は")
+                                .font(.subheadline)
+                                .foregroundColor(Color(UIColor.secondaryLabel))
+                        }
+                    }
+                    
+                }
+                
+                
+                Chart {
+                    BarMark(
+                        x: .value("Shape Type", "data[0].type"),
+                        y: .value("Total Count", 5)
+                    )
+                    BarMark(
+                        x: .value("Shape Type", "Sphere"),
+                        y: .value("Total Count", 3)
+                    )
+                    BarMark(
+                        x: .value("Shape Type", "Pyramid"),
+                        y: .value("Total Count", 2)
+                    )
+                }
+            }
+            .padding(.vertical, 32)
+            .padding(.horizontal, 24)
+            .frame(maxWidth: .infinity)
+            .background(Color(.systemBackground))
+            .cornerRadius(8)
+        }
+        .padding()
     }
     
     private var foot: some View {
