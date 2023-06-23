@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		400E96112A17D1F400472D13 /* SaveNeckApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 400E96102A17D1F400472D13 /* SaveNeckApp.swift */; };
-		400E96132A17D1F400472D13 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 400E96122A17D1F400472D13 /* MainView.swift */; };
+		400E96132A17D1F400472D13 /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 400E96122A17D1F400472D13 /* Main.swift */; };
 		400E96152A17D1F600472D13 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 400E96142A17D1F600472D13 /* Assets.xcassets */; };
 		400E96182A17D1F600472D13 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 400E96172A17D1F600472D13 /* Preview Assets.xcassets */; };
 		404316A42A3440660024FAF8 /* Info.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404316A32A3440660024FAF8 /* Info.swift */; };
@@ -21,12 +21,18 @@
 		407C5DB82A1CE22800FD298C /* Permission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407C5DB72A1CE22800FD298C /* Permission.swift */; };
 		407C5DBA2A21DA8800FD298C /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407C5DB92A21DA8800FD298C /* Location.swift */; };
 		40C0C16E2A34D5680074D547 /* Safari.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C0C16D2A34D5680074D547 /* Safari.swift */; };
+		40C0C1722A44310C0074D547 /* NeckDay.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 40C0C1702A44310C0074D547 /* NeckDay.xcdatamodeld */; };
+		40C0C1782A4434C90074D547 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C0C1772A4434C90074D547 /* Persistence.swift */; };
+		40C0C17E2A4544790074D547 /* HistoryChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C0C17D2A4544790074D547 /* HistoryChart.swift */; };
+		40C0C1812A454E960074D547 /* NeckDay+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C0C17F2A454E960074D547 /* NeckDay+CoreDataClass.swift */; };
+		40C0C1822A454E960074D547 /* NeckDay+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C0C1802A454E960074D547 /* NeckDay+CoreDataProperties.swift */; };
+		40C0C1852A455FFE0074D547 /* OrderedCollections in Frameworks */ = {isa = PBXBuildFile; productRef = 40C0C1842A455FFE0074D547 /* OrderedCollections */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		400E960D2A17D1F400472D13 /* save_neck.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = save_neck.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		400E96102A17D1F400472D13 /* SaveNeckApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveNeckApp.swift; sourceTree = "<group>"; };
-		400E96122A17D1F400472D13 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		400E96122A17D1F400472D13 /* Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
 		400E96142A17D1F600472D13 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		400E96172A17D1F600472D13 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		400E961E2A17D49F00472D13 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = save_neck/Resource/Info.plist; sourceTree = SOURCE_ROOT; };
@@ -40,6 +46,11 @@
 		407C5DB72A1CE22800FD298C /* Permission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Permission.swift; sourceTree = "<group>"; };
 		407C5DB92A21DA8800FD298C /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		40C0C16D2A34D5680074D547 /* Safari.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Safari.swift; sourceTree = "<group>"; };
+		40C0C1712A44310C0074D547 /* NeckDay.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NeckDay.xcdatamodel; sourceTree = "<group>"; };
+		40C0C1772A4434C90074D547 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		40C0C17D2A4544790074D547 /* HistoryChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryChart.swift; sourceTree = "<group>"; };
+		40C0C17F2A454E960074D547 /* NeckDay+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NeckDay+CoreDataClass.swift"; sourceTree = "<group>"; };
+		40C0C1802A454E960074D547 /* NeckDay+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NeckDay+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				40C0C1852A455FFE0074D547 /* OrderedCollections in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,6 +87,7 @@
 				400E96102A17D1F400472D13 /* SaveNeckApp.swift */,
 				407C5DA82A17D9C800FD298C /* Common */,
 				407C5DA42A17D65C00FD298C /* Scene */,
+				40C0C16F2A4430320074D547 /* CoreData */,
 				400E961F2A17D5C100472D13 /* Resource */,
 			);
 			path = save_neck;
@@ -121,8 +134,9 @@
 		407C5DA52A17D6F900FD298C /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				400E96122A17D1F400472D13 /* MainView.swift */,
+				400E96122A17D1F400472D13 /* Main.swift */,
 				407C5DA62A17D71500FD298C /* MainObserver.swift */,
+				40C0C17D2A4544790074D547 /* HistoryChart.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -155,6 +169,17 @@
 			path = Safari;
 			sourceTree = "<group>";
 		};
+		40C0C16F2A4430320074D547 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				40C0C1702A44310C0074D547 /* NeckDay.xcdatamodeld */,
+				40C0C1772A4434C90074D547 /* Persistence.swift */,
+				40C0C17F2A454E960074D547 /* NeckDay+CoreDataClass.swift */,
+				40C0C1802A454E960074D547 /* NeckDay+CoreDataProperties.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -171,6 +196,9 @@
 			dependencies = (
 			);
 			name = save_neck;
+			packageProductDependencies = (
+				40C0C1842A455FFE0074D547 /* OrderedCollections */,
+			);
 			productName = save_neck;
 			productReference = 400E960D2A17D1F400472D13 /* save_neck.app */;
 			productType = "com.apple.product-type.application";
@@ -199,6 +227,9 @@
 				Base,
 			);
 			mainGroup = 400E96042A17D1F400472D13;
+			packageReferences = (
+				40C0C1832A455FFE0074D547 /* XCRemoteSwiftPackageReference "swift-collections" */,
+			);
 			productRefGroup = 400E960E2A17D1F400472D13 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -225,15 +256,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				400E96132A17D1F400472D13 /* MainView.swift in Sources */,
+				400E96132A17D1F400472D13 /* Main.swift in Sources */,
+				40C0C1782A4434C90074D547 /* Persistence.swift in Sources */,
 				407C5DB42A1CE1F200FD298C /* Neck.swift in Sources */,
 				407C5DBA2A21DA8800FD298C /* Location.swift in Sources */,
+				40C0C1722A44310C0074D547 /* NeckDay.xcdatamodeld in Sources */,
 				407C5DAC2A18D64200FD298C /* Notification.swift in Sources */,
 				407C5DA72A17D71500FD298C /* MainObserver.swift in Sources */,
 				40C0C16E2A34D5680074D547 /* Safari.swift in Sources */,
 				407C5DAA2A17D9FB00FD298C /* AirPods.swift in Sources */,
+				40C0C1812A454E960074D547 /* NeckDay+CoreDataClass.swift in Sources */,
 				407C5DB82A1CE22800FD298C /* Permission.swift in Sources */,
 				400E96112A17D1F400472D13 /* SaveNeckApp.swift in Sources */,
+				40C0C1822A454E960074D547 /* NeckDay+CoreDataProperties.swift in Sources */,
+				40C0C17E2A4544790074D547 /* HistoryChart.swift in Sources */,
 				407C5DB12A18EDB700FD298C /* Strings.swift in Sources */,
 				407C5DB62A1CE21A00FD298C /* Function.swift in Sources */,
 				404316A42A3440660024FAF8 /* Info.swift in Sources */,
@@ -461,6 +497,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		40C0C1832A455FFE0074D547 /* XCRemoteSwiftPackageReference "swift-collections" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-collections.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		40C0C1842A455FFE0074D547 /* OrderedCollections */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 40C0C1832A455FFE0074D547 /* XCRemoteSwiftPackageReference "swift-collections" */;
+			productName = OrderedCollections;
+		};
+/* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		40C0C1702A44310C0074D547 /* NeckDay.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				40C0C1712A44310C0074D547 /* NeckDay.xcdatamodel */,
+			);
+			currentVersion = 40C0C1712A44310C0074D547 /* NeckDay.xcdatamodel */;
+			path = NeckDay.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 400E96052A17D1F400472D13 /* Project object */;
 }

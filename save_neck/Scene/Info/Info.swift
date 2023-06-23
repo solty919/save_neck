@@ -54,13 +54,13 @@ struct Info: View {
     private var headsUp: some View {
         VStack(alignment: .leading, spacing: 8) {
             Text("注意喚起")
-                .font(.headline)
+                .font(.caption)
                 .bold()
                 .fixedSize(horizontal: false, vertical: true)
                 .frame(maxWidth: .infinity, alignment: .leading)
             
             Text("本アプリは以下情報に基づいて健康をサポートします")
-                .font(.callout)
+                .font(.caption2)
                 .fixedSize(horizontal: false, vertical: true)
             
             Button {
@@ -68,6 +68,7 @@ struct Info: View {
             } label: {
                 Text("「屈曲弛緩現象（Flexion Relaxation Phenomenon：FRP）と頭蓋脊椎角（Craniovertebral Angle：CVA）を用い、モニターの種類（自動昇降式モニターと固定式モニター）による頭部及び首の姿勢と疲労度に与える影響の比較研究」")
                     .multilineTextAlignment(.leading)
+                    .font(.caption2)
             }
         }
     }

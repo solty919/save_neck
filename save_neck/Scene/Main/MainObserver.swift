@@ -11,7 +11,7 @@ final class MainObserver: NSObject, ObservableObject {
     @Published var state: State = .standard
     @Published var isOpenInfo = false
     @AppStorage("outRange") var outRange = 80.0
-    @AppStorage("isFirstLaunch") var isFirstLaunch = true
+    @AppStorage("isFirstLaunch") var isFirstLaunch = false
     
     enum State { case standard; case outRange; case notify }
     

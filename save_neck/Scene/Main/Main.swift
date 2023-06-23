@@ -1,7 +1,6 @@
 import SwiftUI
-import Charts
 
-struct MainView: View {
+struct Main: View {
     
     @ObservedObject var observer = MainObserver()
     
@@ -13,9 +12,9 @@ struct MainView: View {
                 
                 ScrollView {
                     VStack {
-//                        airPods
-//                        threshold
-                        location
+                        airPods
+                        threshold
+                        HistoryChart()
                         foot
                     }
                 }
@@ -131,62 +130,6 @@ struct MainView: View {
             )
     }
     
-    private var location: some View {
-        VStack(alignment: .leading) {
-            Text("姿勢の履歴")
-                .font(.headline)
-                .bold()
-            
-            
-            
-            VStack(spacing: 32) {
-                HStack {
-                    VStack(alignment: .leading, spacing: 4) {
-                        Text("今日のカウント")
-                            .font(.subheadline)
-                            .foregroundColor(Color(UIColor.secondaryLabel))
-                        Text("6回")
-                            .font(.largeTitle)
-                            .bold()
-                    }
-                    
-                    Spacer()
-                    
-                    VStack {
-                        HStack {
-                            Text("前回との差は")
-                                .font(.subheadline)
-                                .foregroundColor(Color(UIColor.secondaryLabel))
-                        }
-                    }
-                    
-                }
-                
-                
-                Chart {
-                    BarMark(
-                        x: .value("Shape Type", "data[0].type"),
-                        y: .value("Total Count", 5)
-                    )
-                    BarMark(
-                        x: .value("Shape Type", "Sphere"),
-                        y: .value("Total Count", 3)
-                    )
-                    BarMark(
-                        x: .value("Shape Type", "Pyramid"),
-                        y: .value("Total Count", 2)
-                    )
-                }
-            }
-            .padding(.vertical, 32)
-            .padding(.horizontal, 24)
-            .frame(maxWidth: .infinity)
-            .background(Color(.systemBackground))
-            .cornerRadius(8)
-        }
-        .padding()
-    }
-    
     private var foot: some View {
         Text("ヘッドホンとの接続が切れてから10分後にアプリは自動終了します")
             .font(.footnote)
@@ -208,6 +151,6 @@ extension MainObserver.State {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        MainView()
+        Main()
     }
 }
